@@ -9,7 +9,7 @@ result = requests.get(url).text
 doc = BeautifulSoup(result, 'html.parser')
 
 current_price = doc.find('span',{'data-test-id':'symbol-change'})
-print(current_price.text)
+print(current_price.contents)
 
 #<span jsname="vWLAgc" class="IsqQVc NprOob wT3VGc">49.88</span>
 
